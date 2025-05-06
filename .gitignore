@@ -21,6 +21,9 @@ media/
 staticfiles/
 local_settings.py
 
+# Sqlite3
+db.sqlite3
+
 # VS Code
 .vscode/
 
