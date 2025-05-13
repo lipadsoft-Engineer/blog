@@ -14,5 +14,13 @@ class Blogpost(models.Model):
     status = models.CharField(max_length=20,choices=Publish_status.choices,
     default=Publish_status.DRAFT)   
     excerpt = models.TextField(max_length=200, blank
-    =True) 
+    =True)
+
+    author = models.ForeignKey('users.User', on_delete=models.CASCADE)
+    category = models.ForeignKey('category.Category', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.title 
+
+        
 
