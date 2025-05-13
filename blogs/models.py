@@ -18,6 +18,7 @@ class Blogpost(models.Model):
 
     author = models.ForeignKey('users.User', on_delete=models.CASCADE)
     category = models.ForeignKey('category.Category', on_delete=models.CASCADE)
+    likes = models.ManyToManyField('users.User', related_name='blogpost_likes', blank=True)
 
     def __str__(self):
         return self.title 
