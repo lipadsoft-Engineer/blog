@@ -1,4 +1,4 @@
 from django.http import HttpResponse
 
-def index(request):
+def users(request):
     return HttpResponse("Hello world!")
