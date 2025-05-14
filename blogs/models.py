@@ -1,7 +1,7 @@
 from django.db import models
 
 class Blogpost(models.Model):
-    class Publish_status(models.TextChoice):
+    class Publish_status(models.TextChoices):
         DRAFT = 'draft', 'Draft'
         PUBLISHED = 'published', 'Published'
         ARCHIVED = 'archived', 'Archived'
@@ -17,7 +17,7 @@ class Blogpost(models.Model):
     =True)
 
     author = models.ForeignKey('users.User', on_delete=models.CASCADE)
-    category = models.ForeignKey('category.Category', on_delete=models.CASCADE)
+    # category = models.ForeignKey('category.Category', on_delete=models.CASCADE)
     likes = models.ManyToManyField('users.User', related_name='blogpost_likes', blank=True)
 
     def __str__(self):
