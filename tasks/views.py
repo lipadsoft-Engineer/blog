@@ -4,5 +4,7 @@ from django.shortcuts import render
 def index(request):
     return render(request, "tasks/index.html")
 
-def ask(request):
-    return render(request, "tasks/ask.html")
+def ask(request, name):
+    return render(request, "tasks/ask.html", {
+        "name": name.capitalize(),
+    })
