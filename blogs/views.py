@@ -3,8 +3,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html")
+    return render(request, "blogs/index.html")
 
 def greet(request, name):
-    return render(request, "greet.html", { "name": name.capitalize() })
+    return render(request, "blogs/greet.html", { "name": name.capitalize() })
 
