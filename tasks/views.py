@@ -12,3 +12,6 @@ def ask(request, name):
     return render(request, "tasks/ask.html", {
         "name": name.capitalize(),
     })
+
+def add_task(request, ):
+    return render(request, "/tasks/add_task.html", )
