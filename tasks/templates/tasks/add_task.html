@@ -2,7 +2,7 @@
 
 {% block body %}
     <h1>Add Task</h1>
-    <form action="">
+    <form action="{% url 'tasks:add_task' %}" method="post">
         <input type="text" name="new_task" placeholder="Add Task">
         <input type="submit" placeholder="submit">
     </form>
