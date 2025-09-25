@@ -13,5 +13,6 @@ def ask(request, name):
         "name": name.capitalize(),
     })
 
-def add_task(request, ):
+def add_task(request, tasks, new_task ):
+    tasks.append(new_task)
     return render(request, "tasks/add_task.html", )
