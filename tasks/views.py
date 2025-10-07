@@ -1,4 +1,10 @@
 from django.shortcuts import render
+from django import forms
+
+class NewTaskForm(forms.Form):
+    task = forms.CharField(label="Task")
+    priority = forms.IntegerField(label="Priority", min_value=1, max_value=10)
+
 
 tasks = [ "sleep", "pray", "eat"]
 
@@ -14,4 +20,4 @@ def ask(request, name):
     })
 
 def add_task(request):
-    return render(request, "tasks/add_task.html", )
+    return render(request, "tasks/add_task.html",)
