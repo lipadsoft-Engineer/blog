@@ -6,7 +6,8 @@ class NewTaskForm(forms.Form):
     priority = forms.IntegerField(label="Priority", min_value=1, max_value=5)
 
 
-tasks = [ "sleep", "pray", "eat"]
+tasks = [ ]
+priorities = []
 
 # Create your views here.
 def index(request):
@@ -25,6 +26,8 @@ def add_task(request):
         if form.is_valid():
             task = form.cleaned_data["task"]
             tasks.append(task)
+            priority = form.cleaned_data["priority"]
+            priorities.append(priority)
         else:
             return render(request, "tasks/add_task.html", {
                 "form":form
