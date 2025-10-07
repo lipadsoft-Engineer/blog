@@ -4,6 +4,9 @@
 <ul>
         {% for task in tasks %}
             <li>{{ task }}</li>
+            {% for priority in priorities %}
+                <li>{{ priority }}</li>
+            {% endfor %}
         {% endfor %}
 </ul>
 
