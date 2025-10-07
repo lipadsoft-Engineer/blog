@@ -1,10 +1,18 @@
 {% extends "users/layout.html" %}
 
 {% block body %}
+<h1>Users List</h1>
 <ul>
     <li>==== USER ========= ROLE =========</li>
     {% for user, role in zipped_user_data %}
         <li>{{user}} ========= {{role}}</li>
     {% endfor %}
 </ul>
+
+<h1>Add User</h1>
+<form action="" method="post">
+    {% csrf_token %}
+        {{ create_user }}
+    <input type="submit" placeholder="submit">
+</form>
 {% endblock %}
