@@ -2,8 +2,9 @@
     
 {% block body %}
 <ul>
+    <li> --- TASKS ------------ PRIORITY ------</li>
     {% for task, priority in zipped_data %}
-            <li>TASK: {{ task }} -- PRIORITY: {{ priority }}</li>
+            <li>{{ task }} ----------  {{ priority }}</li>
     {% endfor %}
 </ul>
 
