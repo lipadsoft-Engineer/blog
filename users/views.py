@@ -2,10 +2,13 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import datetime
 
+users = ["Peter"]
+roles = ["SuperAdmin"]
+
 now = datetime.datetime.now()
 
 def users(request):
-    return HttpResponse("Hello world!")
+    return render(request, "users/index.html")
 
 def bonjour(request, name):
     return HttpResponse(f"Bonjour, {name.capitalize()}!")
