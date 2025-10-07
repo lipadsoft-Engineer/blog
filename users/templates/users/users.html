@@ -5,7 +5,7 @@
 <ul>
     <li>==== USER ========= ROLE =========</li>
     {% for user, role in zipped_user_data %}
-        <li>{{user}} ========= {{role}}</li>
+        <li>{{user}} ========= {% if role == 'A' %} Admin {% elif role == 'U' %} User {% else %} {{role}} {% endif %} </li>
     {% endfor %}
 </ul>
 
