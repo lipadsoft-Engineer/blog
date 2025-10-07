@@ -26,7 +26,7 @@ def add_task(request):
     if request.method == "POST":
         form = NewTaskForm(request.POST)
         if form.is_valid():
-            task = form.cleaned_data["task"]
+            task = form.cleaned_data["task"].capitalize()
             tasks.append(task)
             priority = form.cleaned_data["priority"]
             priorities.append(priority)
