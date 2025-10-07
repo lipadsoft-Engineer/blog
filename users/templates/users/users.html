@@ -1,0 +1,10 @@
+{% extends "users/layout.html" %}
+
+{% block body %}
+<ul>
+    <li>==== USER ========= ROLE =========</li>
+    {% for user, role in zipped_user_data %}
+        <li>{{user}} ========= {{role}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
