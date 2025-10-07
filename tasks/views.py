@@ -9,11 +9,12 @@ class NewTaskForm(forms.Form):
 tasks = [ ]
 priorities = []
 
+
 # Create your views here.
 def index(request):
+    zipped_data = zip(tasks, priorities)
     return render(request, "tasks/index.html", {
-        "tasks": tasks,
-        "priorities": priorities
+        "zipped_data": zipped_data,
     })
 
 def ask(request, name):
