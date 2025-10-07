@@ -2,12 +2,9 @@
     
 {% block body %}
 <ul>
-        {% for task in tasks %}
-            <li>{{ task }}</li>
-            {% for priority in priorities %}
-                <li>{{ priority }}</li>
-            {% endfor %}
-        {% endfor %}
+    {% for task, priority in zipped_data %}
+            <li>TASK: {{ task }} -- PRIORITY: {{ priority }}</li>
+    {% endfor %}
 </ul>
 
 <a href="{% url 'tasks:add_task' %}">add</a>
