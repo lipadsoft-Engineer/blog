@@ -1,5 +1,13 @@
 {% extends "blogs/layout.html" %}
 
 {% block body %}
-    <h1>Hello Pientoh</h1>
+    <h1>Blogs List</h1>
+    <h3>CATEGORY ============= COUNT</h3>
+    <ul>
+    {% for category, count in zipped_blogs_data %}
+        <li>{{ category }} =================== {{ count }}</li>
+        {% empty %}
+        <li>Empty Blogs List</li>
+    {% endfor %}
+    </ul>
 {% endblock %}
