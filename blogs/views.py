@@ -3,7 +3,7 @@ from django import forms
 from django.http import HttpResponse
 
 
-class NewBlogForm():
+class NewBlogForm(forms.Form):
     category = forms.CharField(label='Category')
     count = forms.IntegerField(label='Count')
 
