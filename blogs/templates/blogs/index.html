@@ -14,5 +14,7 @@
     <h1>Add Blogs</h1>
     <form action="" method="post">
         {% csrf_token %}
+            {{ form }}
+        <input type="submit" placeholder="SUBMIT">
     </form>
 {% endblock %}
