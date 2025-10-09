@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link rel="stylesheet" href="{% static 'css/profile-style.css' %}">
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-card">
+      <div class="profile-header">
+        <img src="{% static 'images/default-avatar.png' %}" alt="Profile Picture" class="profile-img">
+        <h2>{{ user.username }}</h2>
+        <p class="role">Blogger / Member</p>
+      </div>
+
+      <div class="profile-details">
+        <h3>Account Details</h3>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Joined:</strong> {{ user.date_joined|date:"M d, Y" }}</p>
+        <p><strong>Last Login:</strong> {{ user.last_login|date:"M d, Y H:i" }}</p>
+      </div>
+
+      <div class="profile-actions">
+        <a href="{% url 'password_change' %}" class="btn">Change Password</a>
+        <a href="{% url 'logout' %}" class="btn logout">Logout</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
