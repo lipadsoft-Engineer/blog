@@ -1,0 +1,106 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* === Profile Card === */
+.profile-container {
+  width: 100%;
+  max-width: 450px;
+  padding: 20px;
+}
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  padding: 40px 30px;
+  text-align: center;
+  color: #333;
+}
+
+/* === Profile Header === */
+.profile-header {
+  margin-bottom: 25px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #1e3c72;
+  margin-bottom: 15px;
+}
+
+.profile-header h2 {
+  color: #1e3c72;
+  margin: 10px 0 5px;
+}
+
+.role {
+  color: #777;
+  font-size: 14px;
+}
+
+/* === Profile Details === */
+.profile-details {
+  text-align: left;
+  margin-top: 20px;
+  padding: 0 10px;
+}
+
+.profile-details h3 {
+  color: #1e3c72;
+  margin-bottom: 10px;
+}
+
+.profile-details p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+/* === Buttons === */
+.profile-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #1e3c72;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2a5298;
+}
+
+.logout {
+  background-color: #d9534f;
+}
+
+.logout:hover {
+  background-color: #c9302c;
+}
+
+/* === Responsive === */
+@media (max-width: 480px) {
+  .profile-card {
+    padding: 30px 20px;
+  }
+  .profile-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
