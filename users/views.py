@@ -31,6 +31,9 @@ def users(request):
         "create_user": CreateUser()
     })    
 
+def profile(request):
+    return render(request, "registration/profile.html")
+
 def bonjour(request, name):
     return HttpResponse(f"Bonjour, {name.capitalize()}!")
 
