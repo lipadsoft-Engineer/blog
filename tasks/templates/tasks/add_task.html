@@ -1,4 +1,9 @@
 {% extends "tasks/layout.html" %}
+{% load static %}
+
+{% block style %}
+<link href="{% static 'tasks/css/tasks.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block body %}
     <h1>Add Task</h1>
